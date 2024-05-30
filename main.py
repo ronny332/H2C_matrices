@@ -45,7 +45,6 @@ def get_error_code():
 
 
 def get_output_name(name):
-    print(name)
     return name if "xml" in name else f"{name}.xml"
 
 
