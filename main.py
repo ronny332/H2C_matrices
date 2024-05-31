@@ -93,7 +93,7 @@ def parse_input(file_path):
         if len(content) == 0:
             error_out('input-file content can\'t be zero')
 
-        matrix = re.sub(r'[\r\n]', '', content).strip().replace('  ', ' ').split(' ')
+        matrix = re.split(r'\s+', re.sub(r'[\r\n]', '', content).strip())
 
         if len(matrix) != 128:
             error_out(f'valid matrices have to have 128 values. the input has {len(matrix)} values')
